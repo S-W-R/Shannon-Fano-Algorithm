@@ -1,4 +1,4 @@
-import common.core as core
+import core.reader as core
 import argparse
 
 
