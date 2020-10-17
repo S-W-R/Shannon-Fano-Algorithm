@@ -1,15 +1,16 @@
 # Shannon-Fano-Algorithm  
 
-Description  
+Description:  
 This script realize of the Shannon-Fano data compression algorithm  
 
-Requirements  
+Requirements:  
 Python 3.8   
 
 Launch:    
 shannon-fano.py   
 
-Arguments  
+Arguments:  
 -f [filename] - Used to specify a file  
 
-Example: ./shannon-fano.py -f input.txt  
+Example:   
+./shannon-fano.py -f input.txt  
