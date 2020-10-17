@@ -1,5 +1,5 @@
 import math
-from typing import Counter, Dict, List, Tuple, Union
+from typing import Dict, List, Tuple, Union
 
 
 class Table:
