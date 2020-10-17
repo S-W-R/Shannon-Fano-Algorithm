@@ -1,3 +1,4 @@
+import math
 from typing import Counter, Dict, List, Tuple, Union
 
 
@@ -20,18 +21,25 @@ class Table:
         return code_table
 
     def __divide_table(self, char_table: Dict[str, Union[int, float]]):
-        left_table = sorted(char_table.items(), key=lambda x: x[1])
+        table = sorted(char_table.items(), key=lambda x: x[1], reverse=True)
         # type: List[Tuple[str, int]]
         # bug incorrect return typing except List[str], really List[Tuple[]]
-        right_table = []
-        left_weight = sum(item[1] for item in left_table)
+        left_weight = sum(item[1] for item in table)
         right_weight = 0
-        while left_weight > right_weight:
-            right_item = left_table.pop()
-            left_weight -= right_item[1]
-            right_weight += right_item[1]
-            right_table.append(right_item)
-        return dict(left_table), dict(right_table)
+
+        optimal_difference = math.inf
+        index = 0
+        for i in range(len(table)):
+            index = i
+            new_weight = table[i][1]
+            left_weight -= new_weight
+            right_weight += new_weight
+            new_difference = abs(left_weight - right_weight)
+            if new_difference >= optimal_difference:
+                break
+            optimal_difference = new_difference
+
+        return dict(table[:index]), dict(table[index:])
 
     def get_char_code(self, char: str):
         return self._char_to_code_table[char]
