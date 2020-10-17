@@ -1,6 +1,6 @@
 
 def main():
-    from modules.table import Table
+    from lib.table import Table
     table = Table({'a': 1, 'b': 2, 'c': 3})
 
 

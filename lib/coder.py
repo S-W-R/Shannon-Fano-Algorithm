@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from modules.table import Table
+from lib.table import Table
 
 
 class Coder:
