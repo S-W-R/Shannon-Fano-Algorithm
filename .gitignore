@@ -128,3 +128,4 @@ dmypy.json
 
 # local test
 /input.txt
+/output.txt

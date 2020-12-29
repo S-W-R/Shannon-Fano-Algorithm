@@ -1,0 +1,5 @@
+MARK_TABLE_START = '[tbs]'
+MARK_TABLE_END = '[tbe]'
+MARK_TEXT_START = '[cts]'
+MARK_TEXT_END = '[cte]'
+BYTE_LENGTH = 8
